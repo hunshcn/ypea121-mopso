@@ -26,8 +26,8 @@ nVar = 5;             % Number of Decision Variables
 
 VarSize = [1 nVar];   % Size of Decision Variables Matrix
 
-VarMin = 0;          % Lower Bound of Variables
-VarMax = 1;          % Upper Bound of Variables
+VarMin=[0 0 0 0 0];          % Lower Bound of Variables
+VarMax=[1 1 1 1 1];          % Upper Bound of Variables
 
 
 %% MOPSO Parameters

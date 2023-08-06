@@ -19,16 +19,16 @@ function xnew = Mutate(x, pm, VarMin, VarMax)
     nVar = numel(x);
     j = randi([1 nVar]);
 
-    dx = pm*(VarMax-VarMin);
+    dx = pm * (VarMax(j) - VarMin(j));
     
-    lb = x(j) - dx;
-    if lb < VarMin
-        lb = VarMin;
+    lb(j) = x(j) - dx;
+    if lb(j) < VarMin(j)
+        lb(j) = VarMin(j);
     end
     
-    ub = x(j) + dx;
-    if ub > VarMax
-        ub = VarMax;
+    ub(j) = x(j) + dx;
+    if ub(j) > VarMax(j)
+        ub(j) = VarMax(j);
     end
     
     xnew = x;
